@@ -1,0 +1,76 @@
+#mainInfo{
+    padding-bottom: 8%;
+    padding-top: 3%;
+    background-image:url(../../img/fundosDeTela/FundoInfo.webp);
+    background-repeat: no-repeat;
+    margin-top: auto;
+    background-position: center center;
+    background-size: cover;
+}
+
+#containerInfo{
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.031);
+    box-shadow: 20px 16px rgba(0, 0, 0, 0.319);
+    margin-left:10% ;
+    margin-right: 10%;
+    padding: 5%;
+    background-color: white;
+}
+
+#containerInfo h1 {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.064);
+}
+
+#secInfo1, #secInfo2, #secInfo3{
+    display: flex;
+    justify-content: space-between;
+}
+
+#secInfo1 img, #secInfo2 img, #secInfo3 img{
+    width: 45%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#secInfo4 img{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.containerTextinfo{
+   display: flex;
+   align-items: center;
+}
+
+@media (max-width:750px){
+    #mainInfo{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    #containerInfo{
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        margin-left:0 ;
+        margin-right: 0;
+        padding: 5%;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    #secInfo1, #secInfo2, #secInfo3{
+        display: block;
+        justify-content: space-between;
+    }
+
+    #secInfo1 img, #secInfo2 img{
+        width: 90%;
+    }
+
+    #secInfo3 img{
+        display: none;
+    }
+
+}

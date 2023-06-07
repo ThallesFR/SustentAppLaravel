@@ -1,0 +1,100 @@
+#mainLogin{
+    padding-bottom: 8%;
+    padding-top: 5%;
+    background-image:url(../../img/fundosDeTela/FundoLoginCadastro.webp);
+    background-repeat: no-repeat;
+    margin-top: auto;
+    background-position: center center;
+    background-size: cover;
+}
+
+#form_login { 
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.048);
+    text-align: center;
+    }
+
+.divlogo_login {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#logo_login {
+    width: 200px;
+}
+  
+#camposlogin {
+    color: rgba(0, 0, 0, 0.658);
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    border-radius: 10px;
+}
+
+#botaologin{
+    width: 150px;
+    height: 50px;
+    background-color: #16702F;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;  
+    text-align: center; 
+    font-size: large;   
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;  
+}
+
+#botaologin:hover{ 
+    background-color: #169b3c;
+}
+
+#botaologin:disabled{
+    background-color: #16702f6b!important;
+}
+
+#form_login span{
+    font-size: small;
+    display: none;
+    color:rgb(190, 4, 4);
+}
+
+#form_login input{
+    height: 30px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.144);
+    font-size: smaller;
+    outline: 2px;
+}
+
+#form_login input:focus{
+    border-color:#16702F;
+}
+
+@media (max-width: 750px) {
+    #mainLogin{
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+    
+    #form_login { 
+        background-color: rgba(255, 255, 255, 0.904);
+        width: 100%;
+        height: 90vh;
+        padding:20px;
+        border-radius: 0px;
+        margin: 0px;
+        margin-top: 0px;
+        border: none;
+        box-shadow: none;
+        }
+    
+        #camposlogin {
+        width: 100%;
+    }
+}

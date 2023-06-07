@@ -1,0 +1,272 @@
+header {  
+    background-color: #e8ecde;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.61);
+}
+
+#logoAreaCliente{
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#linkLogo{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center ;
+}
+
+#logoHeader {
+    max-width: 100%;
+    height: auto;
+}
+  
+#containerLoginHeader {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center ;  
+    margin-right: 5%;  
+    font-size: large;
+    text-decoration: none;
+}
+#containerLoginHeader a{
+    text-decoration: none;
+}
+
+
+#btn-loginHeader{
+    display: block;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background: #16702F;
+    border-radius: 10px;
+    border-color: #00000013;
+    text-align: center;       
+    font-size: large;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#btn-loginHeader:hover{
+    background: #169b3c;
+}
+
+#perfilHeader,#sairHeader{
+    display: none; /*////////////// está oculto obs: linkar js*/
+    color: #16702F;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#perfilHeader:hover, #sairHeader:hover{
+    color: #1ad44f;
+}
+
+#iconUserHeader{
+    height: 20px;
+    width: 20px;
+}
+
+#navBar{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background-color: #16702F;
+}
+
+#menuAmbientes {
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    width: 75%;
+    height: 100%;
+    background-color: #9CBA5C;
+    justify-content: space-between;/*alinha as divs */
+}
+
+#menuAmbientes a {
+    display: block;
+    color:white;
+    text-decoration: none;
+    margin: 15px;
+    margin-right: 80px;     
+}
+
+#menuAmbientes a:hover {
+    color: #6e581b;
+  }
+
+#containerNav{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*alinha as divs */
+    background: none;
+}
+
+#containerNav a{
+    display: block;
+    color:white;
+    text-decoration: none;
+    margin: 15px;
+    margin-right: 20px;
+    margin-left: 50px;
+}
+
+#containerNav a:hover{
+    color:  #37e067;
+}
+
+#btn-mobile {
+    display: none;
+    color: white;
+}
+
+#btn-mobile:hover{
+    background-color:  #80ac21;
+  }
+
+/*--navbar responsivo em 1024p-- */
+@media (max-width: 1024px) {
+    #logoAreaCliente{
+        height: 60px;
+    }
+
+    #containerLoginHeader {
+        font-size: medium;
+    }
+    
+
+    #navBar{
+        height: 40px;
+        justify-content: space-between;/*alinha as divs */
+    }
+
+    
+    #menuAmbientes a {
+        margin-right: 70px;
+    }
+
+    #containerNav{
+        width: 100%;
+    }    
+
+    #containerNav a{
+        margin: 15px;
+        margin-left: 20%;   
+        margin-top: 20px;     
+    }
+    
+    #iconeCarrinho{
+        height: 23px;
+        width: 23px;  
+    }
+}
+
+/*---navbar responsivo em 768px-- */
+@media (max-width: 768px) {
+    #logoAreaCliente{
+        height: 50px;
+    }
+
+    #logoHeader {
+        width: 220px;
+    }
+
+    #btn-loginHeader{
+        width: 70px;
+        height: 30px;
+        font-size: medium;
+    }
+
+    #navBar{
+        height: 30px;
+        justify-content: space-between;/*alinha as divs */
+    }
+
+    #menuAmbientes {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #containerNav{
+        width: 100%;
+    }    
+
+    #containerNav a{
+        margin: 15px;        
+    }
+    
+    #iconeCarrinho{
+        height: 23px;
+        width: 23px;  
+    }
+
+    #navBar.active #menuAmbientes {
+        height: 35%;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menuAmbientes a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+
+    #menuAmbientes a:hover {
+        font-weight: bold;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        height: 100%;
+        background: #9CBA5C;  
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #navBar.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #navBar.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #navBar.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}

@@ -1,0 +1,185 @@
+#mainCadastro{
+    padding-bottom: 8%;
+    padding-top: 3%;
+    background-image:url(../../img/fundosDeTela/FundoLoginCadastro.webp);
+    background-repeat: no-repeat;
+    margin-top: auto;
+    background-position: center center;
+    background-size: cover;
+}
+
+#cadastro{
+    background-color: rgb(255, 255, 255);
+    width: 925px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.26);
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(0, 0, 0, 0.712);
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.171);
+    display: flex;
+    justify-content: space-between;
+ }
+
+#campos_cadastro{
+    border: 2px solid rgba(0, 0, 0, 0.171);
+    padding: 20px;
+    text-align: left;
+}
+
+#infoPessoais{  
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+#endereco{
+  display: flex;
+  justify-content: space-between;
+}
+
+#cadastro span{
+    display: none;
+    color:rgb(190, 4, 4);
+}
+
+#cadastro input, select {
+  width: 220px;
+  height: 30px;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.178);
+  font-size: small;
+  outline: 2px;
+  margin-right: 10px;
+ }
+ 
+
+ #cadastro input:focus{
+  border-color: #16702F;
+ }
+
+.error_input{
+  border-color: rgb(212, 14, 14);
+  outline: 2px;
+}
+
+.error_input:focus{
+  border-color: rgb(212, 14, 14)!important;
+}
+
+#senha:focus ~ #inf_senha {
+  display: block;
+}
+
+#inf_senha{
+  border-radius: 5px;
+  background-color: rgb(235, 240, 237);
+  border: 2px solid rgba(0, 0, 0, 0.151);
+  padding: 5px;
+  display: none;
+  position: absolute;
+  width: 50%;
+}
+
+#logo_cadastro {
+  width: 100%;
+}
+
+.botoescontainerCadastro{
+  padding: 20px;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+.botoes_cadastro{
+  width: 100px !important;
+  height: 40px!important;
+  border: 1px solid rgba(0, 0, 0, 0.219)!important;
+  border-radius: 5px!important;
+  
+  font-size: large;   
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif; 
+}
+#botaocadastrar{
+  background-color:  #16702F!important;
+  color: white!important;
+}
+
+#botaocadastrar:hover{ 
+  background-color:#169b3c!important;
+}
+
+#botaocadastrar:disabled{
+background-color: #16702f6b!important;
+}
+
+#botaolimpar{
+  color: #16702F!important;
+}
+#botaolimpar:hover{ 
+  background-color:white!important;
+}
+      
+@media (max-width:1109px) {
+  #cadastro{
+    width: 90vw;
+  }
+}
+
+@media (max-width: 860px) {
+  #mainCadastro{
+    padding-bottom: 0%;
+    padding-top: 0%;
+}
+
+  #cadastro{
+    font-size: small;
+    background-color: rgba(255, 255, 255, 0.897);
+    box-shadow: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0px;
+    margin: 0px;
+    margin-top: 0px;
+    border: 0px ;
+    box-shadow: none; 
+    display: block;
+ }
+
+ #infoPessoais,#endereco{
+  display: block;
+ }
+
+ 
+ #isenha{
+  margin-left: 45%;
+ }
+ #inf_senha{
+  font-size: small;
+}
+
+#cadastro span{
+  font-size: small;
+}
+
+#cadastro input{
+  width: 40vw;
+  height: 4vh;
+  font-size: small;
+  outline: 2px;
+ }
+
+ .botoescontainerCadastro{
+  padding-top: 5vh;
+}
+
+ #logo_cadastro {
+  display: none;
+}
+}
+

@@ -1,0 +1,114 @@
+
+#carouselExampleInterval{
+    margin-top: 10px;
+}
+
+@media(max-width:768px){
+    #carouselExampleInterval img{
+        height: 20vh;
+    }
+}
+
+
+#sectionCards{
+    width: 100%;
+    height: 450px;
+    margin-top: 2%;
+}
+
+#containerCards{
+    height: 90%;
+    margin-top:auto ;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    width: 80%;
+}
+
+#sectionCards h1{
+    margin-left: 10%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.11) ;
+    width: 80%;
+}
+
+#containerCards a{
+    width: 25%;
+    height: 44% ;
+    margin-right: 3%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    background-color: #8EB089;
+    text-decoration: none;
+    color: white;
+}
+
+#containerCards a:hover{
+    height: 80% ;
+    background-color:#557a50 ;
+    padding-bottom: 50px;
+}
+
+#containerCards img{
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+#containerCards a:hover img {
+    height: 70%;
+}
+
+.textCards{
+    display: none;
+}
+
+#containerCards a:hover .textCards {
+    display: block;
+}
+
+
+#containerCards h5 {
+    margin-top:5%;
+    margin-left: 5%;
+    margin-bottom: 0%;
+    font-weight: bold;
+}
+
+#containerCards p{
+    text-align: end;
+    margin-right: 5%;
+}
+
+@media (max-width: 1024px) {
+    #sectionCards{
+        height: auto;
+    }
+
+    #containerCards{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    #containerCards a{
+        width: 80%;
+        margin-bottom: 20%;
+    }
+
+    #containerCards a:hover{
+        background-color: #8EB089;
+        padding-bottom: 0px;
+    }
+
+    #containerCards a img {
+        height: 40vh;
+    }
+
+    #containerCards a:hover img{
+        height: 40vh;
+    }
+    
+    #containerCards a .textCards {
+        display: block;
+    }
+}
