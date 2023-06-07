@@ -1,8 +1,8 @@
-<link id="css" rel="stylesheet" href="../../css/components/header.css">
+<link id="css" rel="stylesheet" href="{{asset('css/components/header.css')}}">
 
     <div id="logoAreaCliente">
-        <a id="linkLogo" href="index.html"><img id="logoHeader"src="../../img/logos/LogoSustent.svg" alt="LogoSustent"></a>
-        
+        <a id="linkLogo" href="index.html"><img id="logoHeader"src="/img/logos/LogoSustent.svg" alt="LogoSustent"></a>
+
         <div id="containerLoginHeader">
             <a href="login.html"><button id="btn-loginHeader"type="button" >Login</button></a>
             <a id="perfilHeader" href="perfil.html">
@@ -18,7 +18,7 @@
     </div>
 
     <nav id="navBar">
-          
+
         <ul id="menuAmbientes" role="menu">
             <li><a  href="cozinha.html">Cozinha</a></li>
             <li><a href="quarto.html">Quarto</a></li>
@@ -37,8 +37,8 @@
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
               </svg></a>
         </div>
-    </nav>        
-  
+    </nav>
+
 
 
 
