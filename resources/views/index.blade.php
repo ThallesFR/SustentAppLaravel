@@ -44,24 +44,24 @@
             <h1>Produtos</h1><br>
             <div id="containerCards">
                 <a href="#"id="card1">
-                    <img src="/img/products/co2.webp" alt="móvel">
-                    <h5 class="textCards">Poltrona de Livros</h5><br>
-                    <p class="textCards">R$2250,00</p>
+                    <img src="/img/products/Sofá livros.jpg" alt="móvel">
+                    <h5 class="textCards">Sofá Livros</h5><br>
+                    <p class="textCards">R$1000,00</p>
                 </a>
 
-                <a href="#"id="card2"><img src="/img/products/qua 2.jpg" alt="móvel">
-                    <h5 class="textCards">Poltronas Tonél</h5><br>
-                    <p class="textCards">R$3250,00</p>
+                <a href="#"id="card2"><img src="/img/products/Poltronas tonel.jpg" alt="móvel">
+                    <h5 class="textCards">Poltronas Tonel</h5><br>
+                    <p class="textCards">R$3450,90</p>
                 </a>
 
-                <a href="#"id="card3"><img src="/img/products/sa2.jpg" alt="móvel">
-                    <h5 class="textCards">Mesa de Centro Pallet</h5><br>
-                    <p class="textCards">R$250,00</p>
+                <a href="#"id="card3"><img src="/img/products/Mesa pallet.jpg" alt="móvel">
+                    <h5 class="textCards">Mesa Pallet</h5><br>
+                    <p class="textCards">R$500,00</p>
                 </a>
 
-                <a href="#"id="card4"><img src="/img/products/va2.jpg" alt="móvel">
-                    <h5 class="textCards">Escrivaninha Caixote</h5><br>
-                    <p class="textCards">R$1250,00</p>
+                <a href="#"id="card4"><img src="/img/products/Cama de pinho.jpg" alt="móvel">
+                    <h5 class="textCards">Cama de Pinho</h5><br>
+                    <p class="textCards">R$1500,00</p>
                 </a>
                 </div>
           </section>

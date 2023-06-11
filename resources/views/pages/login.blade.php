@@ -44,13 +44,12 @@
             </div><br>
 
 
-            <p id="cadastre_aqui">Não possui login? <a id="cadastre_aqui" href="cadastro.html">Cadastre-se aqui.</a></p>
+            <p id="cadastre_aqui">Não possui login? <a id="cadastre_aqui" href="{{route('cadastro')}}">Cadastre-se aqui.</a></p>
           </form>
     </main>
 
     @include('components.footer')
 
-    <script src="/js/includeHTML.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
     <script src="/js/script_navbar.js"> </script>
 </body>

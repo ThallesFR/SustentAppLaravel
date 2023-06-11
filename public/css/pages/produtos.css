@@ -1,10 +1,10 @@
-#mainVaranda{
+#mainProduto{
     padding-bottom: 8%;
     padding-top: 3%;
-    height: 80vh;
+    height: 100vh;
 }
 
-#containerVaranda{
+#containerProduto{
     border-radius: 10px;
     border: 2px solid rgba(0, 0, 0, 0.031);
     box-shadow: 20px 16px rgba(0, 0, 0, 0.319);
@@ -15,21 +15,21 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
+
 }
 
-
-#containerVaranda a{
+#containerProduto a{
     width: 30%;
     height: 15%;
     text-decoration: none;
     color: #574A27;
 }
 
-#containerVaranda a img{
+#containerProduto a img{
     width: 100%;
     height: 25vh;
 }
 
-#containerVaranda a p{
+#containerProduto a p{
    color: rgba(0, 0, 0, 0.664);
 }
