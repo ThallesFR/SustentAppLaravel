@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProdutosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+
+Route::prefix('/')->group(function() {
+    Route::get('',[PagesController::class,'index'])->name('index');
+    Route::get('login',[PagesController::class,'login'])->name('login');
+    Route::get('info',[PagesController::class,'info'])->name('info');
+    Route::get('perfil',[PagesController::class,'perfil'])->name('perfil');
+
+});
+
+
+
+
+Route::prefix('produtos')->group(function() {
+
+    Route::get('/cozinha',[ProdutosController::class,'cozinha'])->name('produto.cozinha');
 });

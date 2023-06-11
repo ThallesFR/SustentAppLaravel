@@ -7,25 +7,25 @@
 
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- css -->
-    <link id="css" rel="stylesheet" href="../../css/pages/css.css">
+    <link id="css" rel="stylesheet" href="/css/pages/css.css">
 
     <title>Sustent</title>
-    <link rel="icon" type="image/png" href="../../img/incons/LogoSustent ícone.png"/>
+    <link rel="icon" type="image/png" href="/img/incons/LogoSustent ícone.png"/>
 </head>
 
-<body >       
-   
-    <header include-html="../components/header.html"></header> 
-       
-    <main id="">       
-    </main>
-    
-    <footer include-html="../components/footer.html"></footer>
+<body >
 
-    <script src="../../js/includeHTML.js"> </script>
+@include('components.header')
+
+    <main id="">
+    </main>
+
+    @include('components.footer')
+
+    <script src="/js/includeHTML.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
-    <script src="../../js/script_navbar.js"> </script>
+    <script src="/js/script_navbar.js"> </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <link id="css" rel="stylesheet" href="{{asset('css/components/footer.css')}}">
 <footer id="footer">
-        <a href="index.html"><img id="logoFooter" src="/img/logos/logoBramcoSustent.png"></a>
+        <a href="{{route('index')}}"><img id="logoFooter" src="/img/logos/logoBramcoSustent.png"></a>
         <div id="itensFooter">
             <h6>© Copyright 2023 Thalles F. Rodrigues e Matheus B. de Albuquerque.</h6>
             <div id="btns-footer" >

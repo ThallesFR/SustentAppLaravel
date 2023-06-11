@@ -7,36 +7,36 @@
 
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- css -->
-    <link id="css" rel="stylesheet" href="../../css/pages/css.css">
-    <link id="css" rel="stylesheet" href="../../css/pages/cadastro.css">
+    <link id="css" rel="stylesheet" href="/css/pages/css.css">
+    <link id="css" rel="stylesheet" href="/css/pages/cadastro.css">
 
     <title>Sustent</title>
-    <link rel="icon" type="image/png" href="../../img/incons/LogoSustent ícone.png"/>
+    <link rel="icon" type="image/png" href="/img/incons/LogoSustent ícone.png"/>
 </head>
 
-<body id="body_cadastro">       
-   
-    <header include-html="../components/header.html"></header> 
-       
+<body id="body_cadastro">
+
+@include('components.header')
+
     <main id="mainCadastro">
 
         <form action="login.html" method="post" name=cadastro id="cadastro">
-             
-            
+
+
             <div class="container" name="campos_cadastro" id="campos_cadastro">
-                
-                <div id="infoPessoais"> 
+
+                <div id="infoPessoais">
                     <div id="infoPessoais1">
                         <label for="nome">Nome</label><br>
                         <input class="campos_obrigatorios" type="text" id="nome" name="nome" ><br>
-                        <span class="span" id="span_nome">*mensagem!</span><br>     
-                        
+                        <span class="span" id="span_nome">*mensagem!</span><br>
+
                         <label for="datanasci">Data de nascimento</label><br>
                         <input class="campos_obrigatorios" type="date" id="datanasci" name="datanasci"><br>
                         <span class="span" id="span_datanasci">*mensagem!</span><br>
-                                            
+
                         <label for="cpf">CPF</label><br>
                         <input class="campos_obrigatorios" type="text"id="cpf"name="cpf" autocomplete="oof" placeholder="xxx.xxx.xxx-xx"><br>
                         <span class="span" id="span_cpf">*mensagem!</span><br>
@@ -45,18 +45,18 @@
                         <input class="campos_obrigatorios" type="tel" name="tel_cel" id="tel_cel"  placeholder="xx (xx) xxxx-xxxx"><br>
                         <span class="span" id="span_tel_cel">*mensagem!</span><br>
                     </div>
-                    
-                    <div id="infoPessoais2"> 
+
+                    <div id="infoPessoais2">
                         <label for="email">E-mail</label><br>
                         <input class="campos_obrigatorios" type="text"id="email"name="email" placeholder="xx@xx.xx"><br>
                         <span class="span" id="span_email">*mensagem!</span><br>
-                            
+
                         <label for="senha">Senha</label><br>
                         <input class="campos_obrigatorios" type="password" name="senha" id="senha" ><br>
                         <span class="span" id="span_senha">*mensagem!</span>
                         <h6 id="inf_senha"> A senha deve conter de 8 a 15 caracteres com uma combinação de letras maiúsculas, minúsculas, números e símbolos</h6>
                         <br>
-                            
+
                         <label for="confsenha">Confirme a senha</label><br>
                         <input class="campos_obrigatorios" type="password" name="confsenha" id="confsenha"><br>
                         <span class="span" id="span_confsenha">*mensagem!</span>
@@ -109,7 +109,7 @@
                         <input class="campos_obrigatorios" type="text" id="bairro" name="bairro"><br>
                         <span class="span" id="span_bairro">*mensagem!</span><br>
                     </div>
-                    
+
                     <div>
                         <label for="rua">Rua</label><br>
                         <input class="campos_obrigatorios" name="rua" id="rua"  ></input><br>
@@ -130,22 +130,22 @@
             <div class="botoescontainerCadastro">
 
                 <div class="divlogo_casdastro">
-                    <img id="logo_cadastro" src="../../img/logos/logoLogin.png"id="logo_login">
-                  </div>  
+                    <img id="logo_cadastro" src="/img/logos/logoLogin.png"id="logo_login">
+                  </div>
 
                 <button class="botoes_cadastro"type="submit"name='botaocadastrar' id= 'botaocadastrar'>Cadastrar</button>
                 <button class="botoes_cadastro"name= 'botaolimpar' id='botaolimpar' type="reset">Limpar</button>
             </div>
-        
-        </form>
-       
-    </main>
-    
-    <footer include-html="../components/footer.html"></footer>
 
-    <script src="../../js/includeHTML.js"> </script>
-    <script src="../../js/cadastro.js"> </script>
+        </form>
+
+    </main>
+
+    @include('components.footer')
+
+    <script src="/js/includeHTML.js"> </script>
+    <script src="/js/cadastro.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
-    <script src="../../js/script_navbar.js"> </script>
+    <script src="/js/script_navbar.js"> </script>
 </body>
 </html>
