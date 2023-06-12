@@ -16,42 +16,42 @@ class ProdutosSeeder extends Seeder
             [
                 'nomeProduto' => 'Cozinha modulada',
                 'valorProduto' => '800.00',
-                'ambienteProduto' => 'cozinha'
+                'ambienteProduto' => 'Cozinha'
             ],
             [
                 'nomeProduto' => 'Mesa retrátil',
                 'valorProduto' => '3500.00',
-                'ambienteProduto' => 'cozinha'
+                'ambienteProduto' => 'Cozinha'
             ],
             [
                 'nomeProduto' => 'Sofá livros',
                 'valorProduto' => '1000.00',
-                'ambienteProduto' => 'sala'
+                'ambienteProduto' => 'Sala'
             ],
             [
                 'nomeProduto' => 'Mesa pallet',
                 'valorProduto' => '500.00',
-                'ambienteProduto' => 'sala'
+                'ambienteProduto' => 'Sala'
             ],
             [
                 'nomeProduto' => 'Cama de pinho',
                 'valorProduto' => '1500.00',
-                'ambienteProduto' => 'quarto'
+                'ambienteProduto' => 'Quarto'
             ],
             [
                 'nomeProduto' => 'Guarda roupas',
                 'valorProduto' => '3500.00',
-                'ambienteProduto' => 'quarto'
+                'ambienteProduto' => 'Quarto'
             ],
             [
                 'nomeProduto' => 'Poltronas tonel',
                 'valorProduto' => '3450.90',
-                'ambienteProduto' => 'varanda'
+                'ambienteProduto' => 'Varanda'
             ],
             [
                 'nomeProduto' => 'Sofá processado',
                 'valorProduto' => '1499.99',
-                'ambienteProduto' => 'varanda'
+                'ambienteProduto' => 'Varanda'
             ],
         ];
 

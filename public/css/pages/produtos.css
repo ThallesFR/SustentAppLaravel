@@ -1,7 +1,6 @@
 #mainProduto{
     padding-bottom: 8%;
     padding-top: 3%;
-    height: 100vh;
 }
 
 #containerProduto{
@@ -13,9 +12,15 @@
     padding: 5%;
     padding-bottom: 20%;
     background-color: white;
+}
+
+#container1{
     display: flex;
     justify-content: space-between;
+}
 
+#containerProduto h1{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.212);
 }
 
 #containerProduto a{
@@ -27,9 +32,39 @@
 
 #containerProduto a img{
     width: 100%;
-    height: 25vh;
+    height: 30vh;
+    margin-bottom: 5px;
 }
 
 #containerProduto a p{
    color: rgba(0, 0, 0, 0.664);
 }
+ @media (max-width: 750px){
+    #mainProduto{
+        padding-bottom: 0%;
+        padding-top: 3%;
+    }
+
+    #containerProduto{
+        border-radius: 0px;
+        border: 0px;
+        box-shadow: 0px;
+        margin-left:0% ;
+        margin-right: 0%;
+    }
+
+    #container1{
+        display: block;
+    }
+
+    #containerProduto a img{
+        margin-left: 10%;
+        width: 80%;
+        justify-content: none;
+    }
+
+    #containerProduto  h5, p {
+        margin-left:10% ;
+        margin-right: 10%;
+    }
+ }

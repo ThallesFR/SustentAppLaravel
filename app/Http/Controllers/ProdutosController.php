@@ -16,6 +16,7 @@ class ProdutosController extends Controller
     public function movel($ambiente, $movel)
     {
         $produto = Produto::where('ambienteProduto', $ambiente)->where('nomeProduto', $movel)->first();
+        //dd($produto);
         return view('pages.produtos.movel', compact('produto'));
     }
 }

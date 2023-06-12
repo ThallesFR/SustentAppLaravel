@@ -3,7 +3,7 @@
     padding-left: 2%;
     padding-right: 2%;
     background-color: #535B51;
-    color: white;  
+    color: white;
 }
 
 #logoFooter{
@@ -12,13 +12,13 @@
 }
 
 #itensFooter{
-    height: 40px;  
+    height: 40px;
     display: flex;
     justify-content: space-between;
 }
 
 #itensFooter h6{
-  
+
     color: white;
     font-size: x-small;
 }
@@ -36,7 +36,7 @@
     height: 30px;
     width: 30px;
     filter: invert(1);
-  
+
 }
 
 @media (max-width: 500px) {

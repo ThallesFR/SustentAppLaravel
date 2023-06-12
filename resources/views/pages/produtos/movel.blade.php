@@ -10,7 +10,7 @@
 
     <!-- css -->
     <link id="css" rel="stylesheet" href="/css/pages/css.css">
-    <link id="css" rel="stylesheet" href="/css/pages/produtos.css">
+    <link id="css" rel="stylesheet" href="/css/pages/movel.css">
 
     <title>Sustent</title>
     <link rel="icon" type="image/png" href="/img/incons/LogoSustent ícone.png"/>
@@ -21,7 +21,24 @@
     @include('components.header')
 
     <main id="mainProduto">
-     <h1>foiiiiiii</h1>
+
+        <div id="containerProduto">
+
+            <h1>{{$produto->ambienteProduto}}</h1><br>
+            <div id="container1">
+                <img src="/img/products/{{ $produto->nomeProduto }}.jpg" alt="">
+
+                <div id="text">
+                    <h2>{{$produto->nomeProduto}}</h2>
+                    <h5>R$ {{ number_format($produto->valorProduto, 2, ',', '.') }} à vista</h5><br>
+                    <button href="{{route('carrinho')}}" type="button" class="btn btn-success">Adicionar ao carrinho
+                        <svg id="iconeCarrinho" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                    </button>
+                 </div>
+            </div>
+        </div>
     </main>
 
 

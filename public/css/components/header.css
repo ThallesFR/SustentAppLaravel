@@ -1,4 +1,4 @@
-header {  
+header {
     background-color: #e8ecde;
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.61);
 }
@@ -21,13 +21,13 @@ header {
     max-width: 100%;
     height: auto;
 }
-  
+
 #containerLoginHeader {
     width: 40%;
     display: flex;
     justify-content: flex-end;
-    align-items:center ;  
-    margin-right: 5%;  
+    align-items:center ;
+    margin-right: 5%;
     font-size: large;
     text-decoration: none;
 }
@@ -44,7 +44,7 @@ header {
     background: #16702F;
     border-radius: 10px;
     border-color: #00000013;
-    text-align: center;       
+    text-align: center;
     font-size: large;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
@@ -92,7 +92,7 @@ header {
     color:white;
     text-decoration: none;
     margin: 15px;
-    margin-right: 80px;     
+    margin-right: 80px;
 }
 
 #menuAmbientes a:hover {
@@ -129,8 +129,8 @@ header {
     background-color:  #80ac21;
   }
 
-/*--navbar responsivo em 1024p-- */
-@media (max-width: 1024px) {
+/*--navbar responsivo em p-- */
+@media (max-width: 1068px) {
     #logoAreaCliente{
         height: 60px;
     }
@@ -138,36 +138,36 @@ header {
     #containerLoginHeader {
         font-size: medium;
     }
-    
+
 
     #navBar{
         height: 40px;
         justify-content: space-between;/*alinha as divs */
     }
 
-    
+
     #menuAmbientes a {
         margin-right: 70px;
     }
 
     #containerNav{
         width: 100%;
-    }    
+    }
 
     #containerNav a{
         margin: 15px;
-        margin-left: 20%;   
-        margin-top: 20px;     
+        margin-left: 20%;
+        margin-top: 20px;
     }
-    
+
     #iconeCarrinho{
         height: 23px;
-        width: 23px;  
+        width: 23px;
     }
 }
 
-/*---navbar responsivo em 768px-- */
-@media (max-width: 768px) {
+/*---navbar responsivo em px-- */
+@media (max-width: 828px) {
     #logoAreaCliente{
         height: 50px;
     }
@@ -202,15 +202,15 @@ header {
 
     #containerNav{
         width: 100%;
-    }    
+    }
 
     #containerNav a{
-        margin: 15px;        
+        margin: 15px;
     }
-    
+
     #iconeCarrinho{
         height: 23px;
-        width: 23px;  
+        width: 23px;
     }
 
     #navBar.active #menuAmbientes {
@@ -237,7 +237,7 @@ header {
         cursor: pointer;
         gap: 0.5rem;
         height: 100%;
-        background: #9CBA5C;  
+        background: #9CBA5C;
     }
 
     #hamburger {
