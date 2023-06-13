@@ -1,0 +1,57 @@
+#mainCarrinho{
+    padding-bottom: 10%;
+    padding-top: 3%;
+}
+
+#containerCarrinho{
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.11);
+    margin-left:5%;
+    margin-right: 5%;
+    padding: 5%;
+    padding-left: 1%;
+}
+
+h1{
+    padding-left: 2%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+    margin-bottom: 5%;
+}
+
+#produto{
+    border: 3px solid rgba(0, 0, 0, 0.089);
+    display: flex;
+    justify-content: space-between;
+}
+
+#containerContador input{
+    border: none;
+    text-align: center;
+    width: 20px;
+}
+
+#containerContador button{
+    background: none;
+    border: none;
+}
+.cetas-ativas{
+    color: green;
+}
+.cetas-desativas{
+    color: rgb(86, 156, 86);
+}
+
+#containerTotalCompra{
+    margin-bottom: 10%;
+}
+
+#containerButons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#containerButons button{
+    margin-left: 5%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
