@@ -43,23 +43,26 @@
         <section id="sectionCards">
             <h1>Produtos</h1><br>
             <div id="containerCards">
-                <a href="#"id="card1">
+                <a href="{{ route('produtos.ambiente.movel', ['ambiente' => 'Sala', 'movel' => "Sofá livros"]) }}"id="card1">
                     <img src="/img/products/Sofá livros.jpg" alt="móvel">
                     <h5 class="textCards">Sofá Livros</h5><br>
                     <p class="textCards">R$1000,00</p>
                 </a>
 
-                <a href="#"id="card2"><img src="/img/products/Poltronas tonel.jpg" alt="móvel">
+                <a href="{{ route('produtos.ambiente.movel', ['ambiente' => 'Varanda', 'movel' => "Poltronas tonel"]) }}"id="card2">
+                    <img src="/img/products/Poltronas tonel.jpg" alt="móvel">
                     <h5 class="textCards">Poltronas Tonel</h5><br>
                     <p class="textCards">R$3450,90</p>
                 </a>
 
-                <a href="#"id="card3"><img src="/img/products/Mesa pallet.jpg" alt="móvel">
+                <a href="{{ route('produtos.ambiente.movel', ['ambiente' => 'Sala', 'movel' => "Mesa pallet"]) }}"id="card3">
+                    <img src="/img/products/Mesa pallet.jpg" alt="móvel">
                     <h5 class="textCards">Mesa Pallet</h5><br>
                     <p class="textCards">R$500,00</p>
                 </a>
 
-                <a href="#"id="card4"><img src="/img/products/Cama de pinho.jpg" alt="móvel">
+                <a href="{{ route('produtos.ambiente.movel', ['ambiente' => 'Quarto', 'movel' => "Cama de pinho"]) }}"id="card4">
+                    <img src="/img/products/Cama de pinho.jpg" alt="móvel">
                     <h5 class="textCards">Cama de Pinho</h5><br>
                     <p class="textCards">R$1500,00</p>
                 </a>

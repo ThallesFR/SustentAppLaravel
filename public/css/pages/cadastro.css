@@ -1,3 +1,16 @@
+/*------------------------------- aviso de error-----------*/
+#error-message{
+    margin-left:20%;
+    margin-right: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide {
+    display: none !important
+}
+
 #mainCadastro{
     padding-bottom: 8%;
     padding-top: 3%;
@@ -31,7 +44,7 @@
     text-align: left;
 }
 
-#infoPessoais{  
+#infoPessoais{
   display: flex;
   justify-content: space-between;
   margin-bottom: 5%;
@@ -56,7 +69,7 @@
   outline: 2px;
   margin-right: 10px;
  }
- 
+
 
  #cadastro input:focus{
   border-color: #16702F;
@@ -100,17 +113,17 @@
   height: 40px!important;
   border: 1px solid rgba(0, 0, 0, 0.219)!important;
   border-radius: 5px!important;
-  
-  font-size: large;   
+
+  font-size: large;
   font-style: italic;
-  font-family: 'Times New Roman', Times, serif; 
+  font-family: 'Times New Roman', Times, serif;
 }
 #botaocadastrar{
   background-color:  #16702F!important;
   color: white!important;
 }
 
-#botaocadastrar:hover{ 
+#botaocadastrar:hover{
   background-color:#169b3c!important;
 }
 
@@ -121,10 +134,10 @@ background-color: #16702f6b!important;
 #botaolimpar{
   color: #16702F!important;
 }
-#botaolimpar:hover{ 
+#botaolimpar:hover{
   background-color:white!important;
 }
-      
+
 @media (max-width:1109px) {
   #cadastro{
     width: 90vw;
@@ -147,7 +160,7 @@ background-color: #16702f6b!important;
     margin: 0px;
     margin-top: 0px;
     border: 0px ;
-    box-shadow: none; 
+    box-shadow: none;
     display: block;
  }
 
@@ -155,7 +168,7 @@ background-color: #16702f6b!important;
   display: block;
  }
 
- 
+
  #isenha{
   margin-left: 45%;
  }

@@ -21,6 +21,13 @@
 @include('components.header')
 
     <main id="mainLogin">
+
+        @if(session('success'))
+            <div id="success-message" class="alert alert-success">
+             {{ session('success') }}
+            </div>
+        @endif
+
         <form id="form_login"action="index.html" method="post" name="form_login" id="telalogin">
 
             <div class="divlogo_login">
@@ -52,6 +59,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
     <script src="/js/script_navbar.js"> </script>
+    <script src="/js/message.js" ></script>
 </body>
 </html>
 

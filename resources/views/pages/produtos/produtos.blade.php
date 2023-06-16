@@ -26,14 +26,14 @@
 
         <div id="containerProduto">
 
-            <h1>{{ $findProduto->first()->ambienteProduto }}</h1><br>
+            <h1>{{ $findProduto->first()->ambiente}}</h1><br>
 
             <div id="container1">
                 @foreach ($findProduto as $produto)
-                    <a href="{{ route('produtos.ambiente.movel', ['ambiente' => $produto->ambienteProduto, 'movel' => $produto->nomeProduto]) }}">
-                        <img src="/img/products/{{ $produto->nomeProduto }}.jpg" alt="">
-                        <h5>{{ $produto->nomeProduto }}</h5>
-                        <p>R$ {{ number_format($produto->valorProduto, 2, ',', '.') }} à vista</p>
+                    <a href="{{ route('produtos.ambiente.movel', ['ambiente' => $produto->ambiente, 'movel' => $produto->nome]) }}">
+                        <img src="/img/products/{{ $produto->nome }}.jpg" alt="">
+                        <h5>{{ $produto->nome }}</h5>
+                        <p>R$ {{ number_format($produto->valor, 2, ',', '.') }} à vista</p>
                     </a><br>
                 @endforeach
             </div>

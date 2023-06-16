@@ -1,19 +1,20 @@
 //////////////////////////////// contador ////////////////////////////////
-var elemento = document.getElementById("cetaEsquerda");
-var elemento = document.getElementById("cetaDireita");
-function incrementar() {
-    var contadorElemento = document.getElementById("contador");
+
+//////////////////////////////// contador ////////////////////////////////
+
+function incrementar(id) {
+    var contadorElemento = document.getElementById(id);
     var contador = parseInt(contadorElemento.value);
-    if (contador < 10) {
+    if (contador < 5) {
       contador++;
     }
     contadorElemento.value = contador;
   }
 
-  function decrementar() {
-    var contadorElemento = document.getElementById("contador");
+  function decrementar(id) {
+    var contadorElemento = document.getElementById(id);
     var contador = parseInt(contadorElemento.value);
-    if (contador > 0) {
+    if (contador > 1) {
       contador--;
     }
     contadorElemento.value = contador;

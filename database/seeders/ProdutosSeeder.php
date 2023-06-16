@@ -14,45 +14,45 @@ class ProdutosSeeder extends Seeder
     {
         $produtos = [
             [
-                'nomeProduto' => 'Cozinha modulada',
-                'valorProduto' => '800.00',
-                'ambienteProduto' => 'Cozinha'
+                'nome' => 'Cozinha modulada',
+                'valor' => 800.00,
+                'ambiente' => 'Cozinha'
             ],
             [
-                'nomeProduto' => 'Mesa retrátil',
-                'valorProduto' => '3500.00',
-                'ambienteProduto' => 'Cozinha'
+                'nome' => 'Mesa retrátil',
+                'valor' => 3500.00,
+                'ambiente' => 'Cozinha'
             ],
             [
-                'nomeProduto' => 'Sofá livros',
-                'valorProduto' => '1000.00',
-                'ambienteProduto' => 'Sala'
+                'nome' => 'Sofá livros',
+                'valor' => 1000.00,
+                'ambiente' => 'Sala'
             ],
             [
-                'nomeProduto' => 'Mesa pallet',
-                'valorProduto' => '500.00',
-                'ambienteProduto' => 'Sala'
+                'nome' => 'Mesa pallet',
+                'valor' => 500.00,
+                'ambiente' => 'Sala'
             ],
             [
-                'nomeProduto' => 'Cama de pinho',
-                'valorProduto' => '1500.00',
-                'ambienteProduto' => 'Quarto'
+                'nome' => 'Cama de pinho',
+                'valor' => 1500.00,
+                'ambiente' => 'Quarto'
             ],
             [
-                'nomeProduto' => 'Guarda roupas',
-                'valorProduto' => '3500.00',
-                'ambienteProduto' => 'Quarto'
+                'nome' => 'Guarda roupas',
+                'valor' => 3500.00,
+                'ambiente' => 'Quarto'
             ],
             [
-                'nomeProduto' => 'Poltronas tonel',
-                'valorProduto' => '3450.90',
-                'ambienteProduto' => 'Varanda'
+                'nome' => 'Poltronas tonel',
+                'valor' => 3450.90,
+                'ambiente' => 'Varanda'
             ],
             [
-                'nomeProduto' => 'Sofá processado',
-                'valorProduto' => '1499.99',
-                'ambienteProduto' => 'Varanda'
-            ],
+                'nome' => 'Sofá processado',
+                'valor' => 1499.99,
+                'ambiente' => 'Varanda'
+            ]
         ];
 
         foreach ($produtos as $produto) {

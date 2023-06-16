@@ -1,7 +1,7 @@
 
 //////////// INDEX
 
-/* 
+/*
    -LOCAL STORAGE: linha 18
    -Regex MASCARAS: linha 33
    -Cep validação: linha 95
@@ -14,20 +14,22 @@
     return document.getElementById( el );
 }
 
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////     Regex MASCARAS                      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
- 
+
     function mask(o,f){
     v_obj=o
     v_fun=f
     setTimeout("execmask()",1)
     }
-    
+
     function execmask(){
     v_obj.value=v_fun(v_obj.value)
     }
-    
+
     function masktel(v){
         v=v.replace(/\D/g,"")
         v=v.replace(/^(\d)/,"+$1")
@@ -44,26 +46,26 @@
         } else if (v.length > 15) {
             v=v.replace(/(.{4})$/,"-$1")
         }
-        return v;}   
-        
-        
+        return v;}
 
-    function maskcep(v){ 
+
+
+    function maskcep(v){
         v=v.replace(/\D/g,"");
         v=v.replace(/(\d{5})(\d)/,"$1-$2");
         return v;
         }
 
-    function maskapenas_letras(v){ 
+    function maskapenas_letras(v){
             v=v.replace(/\d/g,"");
             return v;
             }
 
-    function maskapenas_numeros(v){ 
+    function maskapenas_numeros(v){
             v=v.replace(/\D/g,"");
             return v;
                }
-    
+
     function maskcpf(v){
         //Remove tudo o que não é dígito
         v=v.replace(/\D/g,"")
@@ -85,7 +87,7 @@ function limpa_formulário_cep() {
       id('rua').value=("");
       id('bairro').value=("");
       id('cidade').value=("");
-      id('UF').value=("");  
+      id('UF').value=("");
 }
 
 function meu_callback(conteudo) {
@@ -99,15 +101,15 @@ function meu_callback(conteudo) {
       id("CEP").classList.remove('error_input');
     } //end if.
     else {
-        //CEP não Encontrado. 
+        //CEP não Encontrado.
         CEP_valido=false
         id("span_CEP").style.display='block';
         id("CEP").classList.add('error_input');
         id("span_CEP").innerHTML="CEP não encontrado";
-        limpa_formulário_cep();  
+        limpa_formulário_cep();
     }
 }
-    
+
 function pesquisacep(valor) {
     //Nova variável "cep" somente com dígitos.
     var cep = valor.replace(/\D/g, '');
@@ -146,25 +148,25 @@ function pesquisacep(valor) {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
- 
-   
+
+
      const function_events =()=>{//------------------------ EXECUÇÃO DAS FUNÇÕES COMO EVENTOS------------------------------------------//////
-    
-      
- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////----------------------------------------------------------------------------- MASCARAS ---------------------------------------------///////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-     
-        
+
+
         //CELULAR -------
         id('tel_cel').setAttribute('maxlength', 19);
         id('tel_cel').onkeypress = function(){
             mask( this, masktel );
         }
-        
+
         //CPF ---------
             id('cpf').setAttribute('maxlength', 14);
-            id('cpf').onkeypress = function(){        
+            id('cpf').onkeypress = function(){
             mask( this, maskcpf );}
 
         //CEP ---------
@@ -175,7 +177,7 @@ function pesquisacep(valor) {
 
         //NOME-------------
         id('nome').setAttribute('maxlength', 60);
-         
+
          //COMPLEMENTO-------------
          id('complemento').setAttribute('maxlength', 60);
 
@@ -189,7 +191,7 @@ function pesquisacep(valor) {
 
         //CIDADE-------------
         id('cidade').setAttribute('maxlength', 60);
-       
+
          //BAIRRO-------------
          id('bairro').setAttribute('maxlength', 60);
 
@@ -207,11 +209,11 @@ function pesquisacep(valor) {
          //CONFIRMAR_SENHA-------------
          id('confsenha').setAttribute('maxlength', 15);
 
-      
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////--------------------------------------------------------------------------   VALIDAÇÂO ---------------------------------------------------------------------------////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
+
 //////////////////////////////////  VALIDAR SUBMIT ////////////////////////////////////////////////////////
 
 validar_submit()//--------------------------------- EXECUTA FUNÇÃO SUBMIT AO ABRIR A PAGINA-------/
@@ -229,7 +231,7 @@ var CEP_valido=false;
 
             let valido=0;
             let input=document.getElementsByClassName("campos_obrigatorios");
-           
+
             for (let index = 0; index < input.length; index++) {//----------LOCALIZA INPUTS VAZIOS-----//
                 const campo = input[index];
                 if(campo.value.replace(/\s+/g, '') == ''){
@@ -237,13 +239,13 @@ var CEP_valido=false;
                 }
                 else{valido+=1;}
             }
-         
+
             if(valido == input.length && email_valido!= false && senha_valido!= false  //-----------REABILITA SUBMIT SE ATENDIDAS AS CONDIÇÕES----//
-                && confsenha_valido!= false && cpf_valido!= false && nome_valido!= false 
+                && confsenha_valido!= false && cpf_valido!= false && nome_valido!= false
                 && tel_cel_valido!= false&& CEP_valido!=false ){
             id("botaocadastrar").removeAttribute("disabled",);
             }
-        
+
             else{
             id("botaocadastrar").setAttribute("disabled", "disabled");//------------ SENÃO DESABILITA ---------////
             } }
@@ -259,7 +261,7 @@ var CEP_valido=false;
             id("body_cadastro").addEventListener('wheel', validateSUbmiT);
             const validateSUbmIT= () =>{ validar_submit();}
             id("body_cadastro").addEventListener('mousemove', validateSUbmIT);
-        
+
 
 ///////////////////// NOME ///////////////////////////////////////////
 const validateNome = (event) => {
@@ -267,28 +269,28 @@ const validateNome = (event) => {
     const regex =/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/;
     const nomeTest = regex.test(input.value.replace(/\s+/g, ''));
 
-    if(!nomeTest || input.value.length < 15 ) { 
+    if(!nomeTest || input.value.length < 15 ) {
         nome_valido = false;
         id('span_nome').style.display='block';
         id('nome').classList.add('error_input');
         id('span_nome').innerHTML="Nome com menos de 15 caractéres.";
     } else {
-        nome_valido = true; 
-        
+        nome_valido = true;
+
         id('span_nome').style.display='none';
-        id('nome').classList.remove('error_input');      
+        id('nome').classList.remove('error_input');
     }
 }
     id("nome").addEventListener('input', validateNome);
-  
+
 
 ////////////////////////////////////////DATA NASCIMENTO /////////////////
 const validateDatansci= (event) =>{
     const input = event.currentTarget;
-    
+
     if(input.value == '') {
         datanasci_valido=false;
-         id('datanasci').classList.add('error_input');      
+         id('datanasci').classList.add('error_input');
     }
     else{datanasci_valido=true;
         id('datanasci').classList.remove('error_input');}
@@ -299,58 +301,58 @@ const validateDatansci= (event) =>{
 /////////////////////// CPF  ///////////////////////////////////
 
         //----------------------------------lógica CPF-------------//
-        function validarCPF(cpf) {	
-            cpf = id("cpf").value.replace(/[^\d]+/g,'');	
-            if(cpf == '') return false;	
-            // Elimina CPFs invalidos conhecidos	
-            if (cpf.length != 11 || 
-                cpf == "00000000000" || 
-                cpf == "11111111111" || 
-                cpf == "22222222222" || 
-                cpf == "33333333333" || 
-                cpf == "44444444444" || 
-                cpf == "55555555555" || 
-                cpf == "66666666666" || 
-                cpf == "77777777777" || 
-                cpf == "88888888888" || 
+        function validarCPF(cpf) {
+            cpf = id("cpf").value.replace(/[^\d]+/g,'');
+            if(cpf == '') return false;
+            // Elimina CPFs invalidos conhecidos
+            if (cpf.length != 11 ||
+                cpf == "00000000000" ||
+                cpf == "11111111111" ||
+                cpf == "22222222222" ||
+                cpf == "33333333333" ||
+                cpf == "44444444444" ||
+                cpf == "55555555555" ||
+                cpf == "66666666666" ||
+                cpf == "77777777777" ||
+                cpf == "88888888888" ||
                 cpf == "99999999999")
-                    return false;		
-            // Valida 1o digito	
-            add = 0;	
-            for (i=0; i < 9; i ++)		
-                add += parseInt(cpf.charAt(i)) * (10 - i);	
-                rev = 11 - (add % 11);	
-                if (rev == 10 || rev == 11)		
-                    rev = 0;	
-                if (rev != parseInt(cpf.charAt(9)))		
-                    return false;		
-            // Valida 2o digito	
-            add = 0;	
-            for (i = 0; i < 10; i ++)		
-                add += parseInt(cpf.charAt(i)) * (11 - i);	
-            rev = 11 - (add % 11);	
-            if (rev == 10 || rev == 11)	
-                rev = 0;	
+                    return false;
+            // Valida 1o digito
+            add = 0;
+            for (i=0; i < 9; i ++)
+                add += parseInt(cpf.charAt(i)) * (10 - i);
+                rev = 11 - (add % 11);
+                if (rev == 10 || rev == 11)
+                    rev = 0;
+                if (rev != parseInt(cpf.charAt(9)))
+                    return false;
+            // Valida 2o digito
+            add = 0;
+            for (i = 0; i < 10; i ++)
+                add += parseInt(cpf.charAt(i)) * (11 - i);
+            rev = 11 - (add % 11);
+            if (rev == 10 || rev == 11)
+                rev = 0;
             if (rev != parseInt(cpf.charAt(10)))
-                return false;		
-            return true;   
+                return false;
+            return true;
         }
-    
+
 
         //-------------------------------aminação//
         const validateCpf= () => {
-            
+
                 if(validarCPF() == false) {
-                    cpf_valido=false  
+                    cpf_valido=false
                     id('span_cpf').style.display='block';
                     id('cpf').classList.add('error_input');
                     id('span_cpf').innerHTML="Você precisa informar um CPF válido.";
-            
+
                 } else {
                     cpf_valido=true
                     id('span_cpf').style.display='none';
                     id('cpf').classList.remove('error_input');
-                }      
+                }
             }
             id("cpf").addEventListener('input', validateCpf);
 
@@ -358,7 +360,7 @@ const validateDatansci= (event) =>{
 ///////////////////// TEL CEL  //////////////////////////////////////////
 const validateCel = (event) => {
     const input = event.currentTarget;
-      
+
         if(input.value.length < 18) {
             tel_cel_valido=false;
             id('span_tel_cel').style.display='block';
@@ -372,10 +374,10 @@ const validateCel = (event) => {
     }
     id("tel_cel").addEventListener('input', validateCel);
 
-/////////////////////////////// CEP /////////////////////////////// 
+/////////////////////////////// CEP ///////////////////////////////
 const validateCEP = (event) => {
     const input = event.currentTarget;
-      
+
         if(input.value.length != 9) {
             CEP_valido=false;
             id('CEP').classList.add('error_input');
@@ -385,23 +387,23 @@ const validateCEP = (event) => {
         }
     }
     id("CEP").addEventListener('input', validateCEP);
-    
+
 
 ////////////////////////// EMAIL /////////////////////////////////////////
 const validateEmail = (event) => {
     const input = event.currentTarget;
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const emailTest = regex.test(input.value);
-    
-    if(!emailTest) { 
+
+    if(!emailTest) {
         email_valido = false;
         id('span_email').style.display='block';
         id('email').classList.add('error_input');
         id('span_email').innerHTML="Você precisa informar um e-mail válido.";
     } else {
-        email_valido = true; 
+        email_valido = true;
         id('span_email').style.display='none';
-        id('email').classList.remove('error_input');             
+        id('email').classList.remove('error_input');
     }
 }
  id("email").addEventListener('input', validateEmail);
@@ -412,8 +414,8 @@ const validateEmail = (event) => {
         const regex=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,15}$/;
         const senhaTest = regex.test(input.value);
 
-        if(!senhaTest) { 
-            senha_valido=false;      
+        if(!senhaTest) {
+            senha_valido=false;
             id('span_senha').style.display='block';
             id('senha').classList.add('error_input');
             id('span_senha').innerHTML="Você precisa informar uma senha válida.";
@@ -422,8 +424,8 @@ const validateEmail = (event) => {
             senha_valido=true;
             id('span_senha').style.display='none';
             id('senha').classList.remove('error_input');
-          
-                    
+
+
                     if(id('confsenha').value != id("senha").value) {
                         confsenha_valido=false;
                         id('span_confsenha').style.display='block';
@@ -441,7 +443,7 @@ const validateEmail = (event) => {
 ///////////////////////   CONFIRMAÇÃO DA SENHA ////////////////////////////////
     const validateConfsenha = (event) => {
     const input = event.currentTarget;
-        
+
         if(input.value != id("senha").value) {
             confsenha_valido=false;
             id('span_confsenha').style.display='block';
@@ -460,4 +462,3 @@ window.onload =function_events;/////////////////////////////////////////////////
 
 
 
-    

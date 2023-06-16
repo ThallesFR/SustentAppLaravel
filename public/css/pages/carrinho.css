@@ -19,10 +19,31 @@ h1{
 }
 
 #produto{
+    height: 25vh;
     border: 3px solid rgba(0, 0, 0, 0.089);
     display: flex;
     justify-content: space-between;
 }
+
+#imagemtxt{
+    padding: 2%;
+}
+
+#imagemtxt img{
+    height: 15vh;
+    width: 15vw;
+}
+#imagemtxt p{
+    width: 100%;
+    text-align: center;
+}
+
+#containerContador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 
 #containerContador input{
     border: none;
@@ -33,12 +54,34 @@ h1{
 #containerContador button{
     background: none;
     border: none;
-}
-.cetas-ativas{
     color: green;
 }
-.cetas-desativas{
-    color: rgb(86, 156, 86);
+
+
+#containerContador button:hover{
+    color: rgb(114, 206, 114);
+}
+
+#valor{
+    padding-top: 7vh;
+    text-align: center;
+}
+
+#deleteLixeira{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: green;
+}
+#deleteLixeira :hover{
+    cursor: pointer;
+    color: red;
+    display: flex;
+    justify-items: center;
 }
 
 #containerTotalCompra{
@@ -51,7 +94,60 @@ h1{
     justify-content: center;
 }
 
+#containerButons a{
+    margin-left: 5%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 #containerButons button{
     margin-left: 5%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.carrinhoVazio{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#buttonVazio{
+    margin-left: 0px;
+}
+
+@media(max-width: 750px){
+
+    #produto{
+        padding-top: 10%;
+        width: 100%;
+        height: auto;
+        display: inline-grid;
+        justify-content: center;
+    }
+    #imagemtxt img{
+        height: 15vh;
+        width: 40vw;
+    }
+    #deleteLixeira{
+        width: 100%;
+        margin-bottom: 20%;
+    }
+    #containerButons{
+        display:inline-grid;
+        justify-content: center;
+    }
+
+    #containerButons a{
+        margin-left: 0%;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    #containerButons button {
+        margin-left: 0%;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+
 }

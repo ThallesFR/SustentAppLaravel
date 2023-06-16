@@ -11,20 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('carrinhos', function (Blueprint $table) {
+        Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('produto_id')->constrained('produtos');
-            $table->integer('quantidade');
+            $table->decimal('valor');
             $table->timestamps();
             $table->foreignId('user_id')->constrained('users');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('carrinhos');
+        Schema::dropIfExists('pedidos');
     }
 };

@@ -22,9 +22,14 @@
 
     <main id="mainCadastro">
 
-        <form action="login.html" method="post" name=cadastro id="cadastro">
+        @if(session('error'))
+            <div id="error-message" class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
 
-
+        <form action="{{route('cadastro.user')}}" method="POST" name=cadastro id="cadastro">
+            @csrf
             <div class="container" name="campos_cadastro" id="campos_cadastro">
 
                 <div id="infoPessoais">
@@ -34,15 +39,15 @@
                         <span class="span" id="span_nome">*mensagem!</span><br>
 
                         <label for="datanasci">Data de nascimento</label><br>
-                        <input class="campos_obrigatorios" type="date" id="datanasci" name="datanasci"><br>
+                        <input class="campos_obrigatorios" type="date" id="datanasci" name="nascimento"><br>
                         <span class="span" id="span_datanasci">*mensagem!</span><br>
 
                         <label for="cpf">CPF</label><br>
-                        <input class="campos_obrigatorios" type="text"id="cpf"name="cpf" autocomplete="oof" placeholder="xxx.xxx.xxx-xx"><br>
+                        <input class="campos_obrigatorios" type="text"id="cpf"name="CPF" autocomplete="oof" placeholder="xxx.xxx.xxx-xx"><br>
                         <span class="span" id="span_cpf">*mensagem!</span><br>
 
                         <label for="tel_cel">Telefone celular</label><br>
-                        <input class="campos_obrigatorios" type="tel" name="tel_cel" id="tel_cel"  placeholder="xx (xx) xxxx-xxxx"><br>
+                        <input class="campos_obrigatorios" type="tel" name="celular" id="tel_cel"  placeholder="xx (xx) xxxx-xxxx"><br>
                         <span class="span" id="span_tel_cel">*mensagem!</span><br>
                     </div>
 
@@ -52,13 +57,13 @@
                         <span class="span" id="span_email">*mensagem!</span><br>
 
                         <label for="senha">Senha</label><br>
-                        <input class="campos_obrigatorios" type="password" name="senha" id="senha" ><br>
+                        <input class="campos_obrigatorios" type="password" name="password" id="senha" ><br>
                         <span class="span" id="span_senha">*mensagem!</span>
                         <h6 id="inf_senha"> A senha deve conter de 8 a 15 caracteres com uma combinação de letras maiúsculas, minúsculas, números e símbolos</h6>
                         <br>
 
                         <label for="confsenha">Confirme a senha</label><br>
-                        <input class="campos_obrigatorios" type="password" name="confsenha" id="confsenha"><br>
+                        <input class="campos_obrigatorios" type="password" id="confsenha"><br>
                         <span class="span" id="span_confsenha">*mensagem!</span>
                     </div>
                 </div>
@@ -112,12 +117,12 @@
 
                     <div>
                         <label for="rua">Rua</label><br>
-                        <input class="campos_obrigatorios" name="rua" id="rua"  ></input><br>
+                        <input class="campos_obrigatorios" name="rua" id="rua" ><br>
                         <span class="span" id="span_rua">*mensagem!</span><br>
 
 
                         <label for="numero_entrada">Número</label><br>
-                        <input class="campos_obrigatorios" type="text" id="numero_entrada" name="numero_entrada"><br>
+                        <input class="campos_obrigatorios" type="text" id="numero_entrada" name="numero"><br>
                         <span class="span" id="span_numero_entrada">*mensagem!</span><br>
 
                         <label for="complemento">Complemento</label><br>
@@ -133,7 +138,7 @@
                     <img id="logo_cadastro" src="/img/logos/logoLogin.png"id="logo_login">
                   </div>
 
-                <button class="botoes_cadastro"type="submit"name='botaocadastrar' id= 'botaocadastrar'>Cadastrar</button>
+                <button class="botoes_cadastro"type="submit" id= 'botaocadastrar'>Cadastrar</button>
                 <button class="botoes_cadastro"name= 'botaolimpar' id='botaolimpar' type="reset">Limpar</button>
             </div>
 
@@ -146,5 +151,6 @@
     <script src="/js/cadastro.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
     <script src="/js/script_navbar.js"> </script>
+    <script src="/js/message.js" ></script>
 </body>
 </html>
