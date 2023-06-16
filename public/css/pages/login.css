@@ -6,11 +6,7 @@
     align-items: center;
     justify-content: center;
 }
-
-.hide {
-    display: none !important
-}
-
+/*----------------------------------------------*/
 
 #error-message{
     margin-left:30%;
@@ -76,9 +72,6 @@
     background-color: #169b3c;
 }
 
-#botaologin:disabled{
-    background-color: #16702f6b!important;
-}
 
 #form_login span{
     font-size: small;

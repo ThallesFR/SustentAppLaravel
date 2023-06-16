@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
@@ -17,17 +18,5 @@ class PagesController extends Controller
     {
         return view('pages.info');
     }
-
-    public function login()
-    {
-        return view('pages.login');
-    }
-
-    public function perfil()
-    {
-        return view('pages.perfil');
-    }
-
-
 }
 

@@ -22,27 +22,49 @@
 
     <main id="mainLogin">
 
-        @if(session('success'))
-            <div id="success-message" class="alert alert-success">
-             {{ session('success') }}
-            </div>
-        @endif
 
-        <form id="form_login"action="index.html" method="post" name="form_login" id="telalogin">
+
+        <form id="form_login"action="{{route('auth.user')}}" method="post" name="form_login" id="telalogin">
+            @csrf
 
             <div class="divlogo_login">
               <img src="/img/logos/logoLogin.png"id="logo_login">
             </div>
 
+            @if(session('success'))
+                        <div id="success-message" class="alert alert-success">
+                        {{ session('success') }}
+                        </div>
+                    @endif
+
+            @if($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ( $errors->all() as $error )
+                        <h6>{{$error}}</h6>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+
+            @if (session('error_login'))
+            <div  class="alert alert-danger">
+                <ul>
+                 {{session('error_login')}}
+                </ul>
+            </div>
+            @endif
+
+
             <div name="camposlogin" id="camposlogin">
 
-              <label for="login"><b>Usuário</b></label><br>
-              <input class="campos_obrigatorios" type="text" name="login" id=login maxlength="6"><br>
-              <span class="span" id="span_login">*mensagem!</span><br><br>
+              <label for="email"><b>Email</b></label><br>
+              <input class="campos_obrigatorios" type="text" name="email" id=email><br>
+              <br><br>
 
               <label for="senha"><b>Senha</b></label><br>
-              <input class="campos_obrigatorios" type="password" name="senha"name=senha id="senha" maxlength="20"><br>
-              <span class="span" id="span_senha">*mensagem!</span><br><br>
+              <input class="campos_obrigatorios" type="password" name="password" ><br>
+              <br><br>
 
 
               <div class="botoes_login">

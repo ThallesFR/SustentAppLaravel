@@ -55,7 +55,7 @@ header {
 }
 
 #perfilHeader,#sairHeader{
-    display: none; /*////////////// está oculto obs: linkar js*/
+    display: block; 
     color: #16702F;
     margin-right: 2px;
     margin-left: 2px;

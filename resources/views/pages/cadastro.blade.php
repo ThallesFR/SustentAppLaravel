@@ -22,14 +22,15 @@
 
     <main id="mainCadastro">
 
-        @if(session('error'))
-            <div id="error-message" class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
 
         <form action="{{route('cadastro.user')}}" method="POST" name=cadastro id="cadastro">
             @csrf
+
+            @if(session('error'))
+                <div id="error-message" class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
             <div class="container" name="campos_cadastro" id="campos_cadastro">
 
                 <div id="infoPessoais">

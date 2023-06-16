@@ -35,7 +35,7 @@
                     <h5> R$ {{ number_format($produto->valor, 2, ',', '.') }} à vista</h5><br>
 
                     <input name="produto_id" value="{{$produto->id}}" type="hidden">
-                    <input name="user_id" value="1" type="hidden">
+                    <input name="user_id" value="{{ auth()->user()->id }}" type="hidden">
                     <input name="quantidade" value="1" type="hidden">
 
 

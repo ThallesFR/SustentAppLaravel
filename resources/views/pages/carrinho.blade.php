@@ -83,7 +83,13 @@
 
                         <a href="{{route('index')}}"class="btn btn-light">Continuar comprando</a>
 
-                        <button type="button" class="btn btn-success">Pagar</button>
+                        <form method="POST" action="{{ route('pedidos') }}">
+                            @csrf
+                                 <input name="valor" value="{{($numeroItens *$itens->produto->valor * $itens->quantidade)}}" type="hidden">
+                                 <input name="user_id" value="{{ auth()->user()->id }}" type="hidden">
+                            <button type="submit" class="btn btn-success">Pagar</button>
+                        </form>
+
                 </div>
 
                 @else
@@ -101,8 +107,6 @@
     @include('components.footer')
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-        {{-- BlocUI loading --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
     <script src="/js/script_navbar.js"> </script>

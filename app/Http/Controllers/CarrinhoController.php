@@ -3,30 +3,38 @@ namespace App\Http\Controllers;
 
 use App\Models\Carrinho;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CarrinhoController extends Controller
 {
+/////////// load page/ verificação de user
     public function page()
     {
-        $findCarrinho = Carrinho::all();
-        $numeroItens = Carrinho::count();
-
+        if (auth()->check())
+        {
+            $findCarrinho = Carrinho::where('user_id', auth()->user()->id)->get();
+            $numeroItens = $findCarrinho->count();
+            // dd($findCarrinho->count());
         return view('pages.carrinho', compact('findCarrinho', 'numeroItens'));
+        }
+        return view('pages.login');
     }
 
 
-    public function deleteAll()
-{
-    Carrinho::truncate();
 
-    return response()->json(['success' => true]);
-}
+    public function deleteAll()
+    {
+        Carrinho::where('user_id', auth()->user()->id)->delete();
+
+        return response()->json(['success' => true]);
+    }
+
 
 
     public function delete(Request $request)
     {
         $id = $request->id;
-        $buscaRegistro = Carrinho::find($id);
+        $buscaRegistro = Carrinho::where('user_id', auth()->user()->id)->find($id);
         $buscaRegistro->delete();
 
         return response()->json(['success' => true]);
@@ -40,7 +48,7 @@ class CarrinhoController extends Controller
         $numeroItensIguais = Carrinho::where('produto_id', $produto_id)->count();
 
         if ($numeroItensIguais != 0) {
-            
+
             return redirect()->route('carrinho');
         }
 
@@ -55,7 +63,7 @@ class CarrinhoController extends Controller
         $data = $request ->all();
 
         $id = $request->id;
-        $buscaRegistro = Carrinho::find($id);
+        $buscaRegistro = Carrinho::where('user_id', auth()->user()->id)->find($id);
         $buscaRegistro->update($data);
 
 
