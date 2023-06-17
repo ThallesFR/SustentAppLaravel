@@ -23,10 +23,10 @@
     <main id="mainHome">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="7000">
+                <div class="carousel-item active" data-bs-interval="4000">
                     <img src="/img/banner/interior.png" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item" data-bs-interval="7000">
+                <div class="carousel-item" data-bs-interval="4000">
                     <img src="/img/banner/interior2.png" class="d-block w-100" alt="...">
                 </div>
             </div>

@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 
 class ProdutosController extends Controller
 {
+///////////////////////////////////////////// load page ambiente dos produtos definidos pelo tipo de ambiente///////////////////////
     public function ambiente($ambiente)
     {
         $findProduto = Produto::where('ambiente', $ambiente)->get();
         return view('pages.produtos.produtos', compact('findProduto'));
     }
 
-
+///////////////////////////////////////////// load page movel do produto pelo seu id para ////////////////////////////
     public function movel($ambiente, $movel)//variaveis  $ambiente e $movel setadas em web.route
     {   if (auth()->check())
         {

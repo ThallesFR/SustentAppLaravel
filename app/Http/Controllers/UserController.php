@@ -9,17 +9,14 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-
-
-
-    ////////////////////////////////////cadastro
+///////////////////////////////////////// load page ///////////////////////////
     public function cadastro()
     {
         return view('pages.cadastro');
     }
 
 
-
+////////////////////////////////////cadastro de user ///////////////////////////////////////////////////////////
     public function cadastrarUser(Request $request)
     {
         $CPF = $request->CPF;
@@ -39,7 +36,7 @@ class UserController extends Controller
         return redirect()->route('login')->with('success', 'Cadastro realizado com sucesso');
     }
 
-    /////////////////////////////////////login e autenticação
+/////////////////////////////////////// login e autenticação de user na seção //////////////////////////
     public function login()
     {
         return view('pages.login');
@@ -59,13 +56,12 @@ class UserController extends Controller
        }
        return redirect()->back()->with('error_login', 'Senha ou email inválidos');
     }
-
+//////////////////////////////////////////////////////////// logout /////////////////////////////////////
     public function logout()
     {
         Auth::logout();
 
         return redirect('/');
     }
-
 
 }

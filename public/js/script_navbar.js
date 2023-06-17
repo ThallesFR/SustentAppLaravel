@@ -19,7 +19,7 @@ function initializeComponent() {
   btnMobile.addEventListener('touchstart', toggleMenu);
 }
 
-// Atrasa a execução da função initializeComponent() em 2 segundos (2000 milissegundos)
+// Atrasa a execução da função initializeComponent() em 2 segundos (2000 milissegundos) para executar o script somente depois da renderização completa da page
 setTimeout(function() {
   initializeComponent();
 }, 100);

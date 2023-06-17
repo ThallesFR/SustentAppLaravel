@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CarrinhoController extends Controller
 {
-/////////// load page/ verificação de user
+/////////// load page/ verificação de user/////////////////////////////////////////////////////////
     public function page()
     {
         if (auth()->check())
@@ -20,7 +20,7 @@ class CarrinhoController extends Controller
     }
 
 
-
+//////////////////////////////////////////// esvaziar o carrinho por completo ///////////////////////////////////
     public function deleteAll()
     {
         Carrinho::where('user_id', auth()->user()->id)->delete();
@@ -29,7 +29,7 @@ class CarrinhoController extends Controller
     }
 
 
-
+//////////////////////////////////////////// deletar item individualmente  ///////////////////////////////////////////////
     public function delete(Request $request)
     {
         $id = $request->id;
@@ -40,15 +40,17 @@ class CarrinhoController extends Controller
     }
 
 
-
+////////////////// cadastro de itens no carrinho ////////////////////////
     public function cadastrarItem(Request $request)
     {
         $produto_id = $request->produto_id;
-        $numeroItensIguais = Carrinho::where('produto_id', $produto_id)->count();
+
+        // 'Carrinho::where('user_id', auth()->user()->id)' esta chamando o modelo Carrinho filtrado pelo user id auth.
+        //"->where('produto_id', $produto_id)" está filtrando o modelo Carrinho filtrado anteriormente pela variável $produto_id pega na $request.
+        $numeroItensIguais = Carrinho::where('user_id', auth()->user()->id)->where('produto_id', $produto_id)->count();
 
         if ($numeroItensIguais != 0) {
-
-            return redirect()->route('carrinho')->with('error', 'Intem já adicionado ao carrinho');
+            return redirect()->route('carrinho')->with('error', 'Item já adicionado ao carrinho');
         }
 
         $data = $request->all();
@@ -56,7 +58,7 @@ class CarrinhoController extends Controller
 
         return redirect()->route('carrinho');
     }
-
+//////////////////////////////// editar quantidade de itens com mesmo id de produto no carrinho ///////////////////////////////////////////////////
     public function quantidadeItem(Request $request,$id)
     {
         $data = $request ->all();

@@ -10,29 +10,17 @@ use App\Http\Controllers\UserController;
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-
 Route::prefix('/')->group(function() {
     Route::get('',[PagesController::class,'index'])->name('index');
-
     Route::get('info',[PagesController::class,'info'])->name('info');
-
 });
+
 
 Route::prefix('produtos')->group(function() {
     Route::get('/ambiente/{ambiente}', [ProdutosController::class, 'ambiente'])->name('produtos.ambiente');
     Route::get('/ambiente/{ambiente}/{movel}', [ProdutosController::class, 'movel'])->name('produtos.ambiente.movel');
 });
+
 
 Route::prefix('carrinho')->group(function() {
     Route::get('/', [CarrinhoController::class, 'page'])->name('carrinho');
@@ -43,21 +31,22 @@ Route::prefix('carrinho')->group(function() {
 });
 
 
-
 Route::prefix('pedidos')->group(function() {
-
     Route::post('/cadastrarPedido}', [PedidosController::class, 'cadastrarPedido'])->name('pedidos');
     Route::delete('/delete',[PedidosController::class,'delete'])->name('pedidos.delete');
 });
+
 
 Route::prefix('cadastro')->group(function() {
     Route::get('/',[UserController::class,'cadastro'])->name('cadastro');
     Route::post('/cadastrarUser}', [UserController::class, 'cadastrarUser'])->name('cadastro.user');
 });
 
+
 Route::prefix('perfil')->group(function() {
     Route::get('/',[PerfilController::class,'perfil'])->name('perfil');
 });
+
 
 Route::prefix('login')->group(function() {
     Route::get('/',[UserController::class,'login'])->name('login');

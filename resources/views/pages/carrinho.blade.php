@@ -51,7 +51,7 @@
 
                             <input name="quantidade" id="{{$itens->id}}" value="{{ $itens->quantidade }}" readonly>
 
-                            <button type="submit" id="cetaDireita{{$itens->id}}" class="cetas-ativas" onclick="incrementar({{ $itens->id }})" type="submit">
+                            <button type="submit" id="cetaDireita{{$itens->id}}" class="cetas-ativas" onclick="incrementar({{ $itens->id }});" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
                                     <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
                                 </svg>
@@ -115,8 +115,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
     <script src="/js/script_navbar.js"> </script>
-    <script src="/js/carrinho.js"></script>
-    <script src="/js/projeto.js"></script>
+    <script src="/js/funcoes.js"></script>
     <script src="/js/message.js" ></script>
 </body>
 </html>
