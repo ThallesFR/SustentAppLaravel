@@ -24,6 +24,11 @@
 
         <div id="containerCarrinho">
             <h1 id="titulo">Carrinho</h1>
+            @if(session('error'))
+                <div id="error-message" class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
 
             @if ($numeroItens != "0" )
 
@@ -112,5 +117,6 @@
     <script src="/js/script_navbar.js"> </script>
     <script src="/js/carrinho.js"></script>
     <script src="/js/projeto.js"></script>
+    <script src="/js/message.js" ></script>
 </body>
 </html>

@@ -14,10 +14,9 @@ class CarrinhoController extends Controller
         {
             $findCarrinho = Carrinho::where('user_id', auth()->user()->id)->get();
             $numeroItens = $findCarrinho->count();
-            // dd($findCarrinho->count());
         return view('pages.carrinho', compact('findCarrinho', 'numeroItens'));
         }
-        return view('pages.login');
+        return redirect()->route('login')->with('success', 'Logue para poder comprar');
     }
 
 
@@ -49,7 +48,7 @@ class CarrinhoController extends Controller
 
         if ($numeroItensIguais != 0) {
 
-            return redirect()->route('carrinho');
+            return redirect()->route('carrinho')->with('error', 'Intem já adicionados ao carrinho');
         }
 
         $data = $request->all();

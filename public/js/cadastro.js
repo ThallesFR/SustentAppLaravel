@@ -30,24 +30,13 @@
     v_obj.value=v_fun(v_obj.value)
     }
 
-    function masktel(v){
-        v=v.replace(/\D/g,"")
-        v=v.replace(/^(\d)/,"+$1")
-        v=v.replace(/(.{3})(\d)/,"$1 ($2")
-        v=v.replace(/(.{7})(\d)/,"$1) $2")
-        if(v.length == 12) {
-            v=v.replace(/(.{1})$/,"-$1")
-        } else if (v.length == 13) {
-            v=v.replace(/(.{2})$/,"-$1")
-        } else if (v.length == 14) {
-            v=v.replace(/(.{3})$/,"-$1")
-        } else if (v.length == 15) {
-            v=v.replace(/(.{4})$/,"-$1")
-        } else if (v.length > 15) {
-            v=v.replace(/(.{4})$/,"-$1")
-        }
-        return v;}
+    function masktel(v) {
+        v = v.replace(/\D/g, "");
+        v = v.replace(/^(\d{2})(\d)/g, "$1 $2"); // Adiciona o espaço após o primeiro bloco de dígitos (DDD)
+        v = v.replace(/(\d{4})(\d)/, "$1 $2"); // Adiciona o espaço após o segundo bloco de dígitos
 
+        return v;
+    }
 
 
     function maskcep(v){
@@ -159,9 +148,9 @@ function pesquisacep(valor) {
 
 
         //CELULAR -------
-        id('tel_cel').setAttribute('maxlength', 19);
-        id('tel_cel').onkeypress = function(){
-            mask( this, masktel );
+        id('tel_cel').setAttribute('maxlength', 13);
+        id('tel_cel').oninput = function() {
+        this.value = masktel(this.value);
         }
 
         //CPF ---------
@@ -361,7 +350,7 @@ const validateDatansci= (event) =>{
 const validateCel = (event) => {
     const input = event.currentTarget;
 
-        if(input.value.length < 18) {
+        if(input.value.length < 13) {
             tel_cel_valido=false;
             id('span_tel_cel').style.display='block';
             id('tel_cel').classList.add('error_input');

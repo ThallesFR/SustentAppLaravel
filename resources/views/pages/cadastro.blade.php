@@ -48,7 +48,7 @@
                         <span class="span" id="span_cpf">*mensagem!</span><br>
 
                         <label for="tel_cel">Telefone celular</label><br>
-                        <input class="campos_obrigatorios" type="tel" name="celular" id="tel_cel"  placeholder="xx (xx) xxxx-xxxx"><br>
+                        <input class="campos_obrigatorios" type="tel" name="celular" id="tel_cel"  placeholder="xx xxxx-xxxx"><br>
                         <span class="span" id="span_tel_cel">*mensagem!</span><br>
                     </div>
 
