@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -21,7 +22,6 @@ class UserController extends Controller
 
     public function cadastrarUser(Request $request)
     {
-
         $CPF = $request->CPF;
         $email = $request->email;
 
@@ -32,11 +32,12 @@ class UserController extends Controller
         }
 
         $data = $request->all();
+        $data['password'] = Hash::make($data['password']); // Aplicar o hash na senha
+
         User::create($data);
 
         return redirect()->route('login')->with('success', 'Cadastro realizado com sucesso');
     }
-
 
     /////////////////////////////////////login e autenticação
     public function login()

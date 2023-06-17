@@ -48,7 +48,7 @@ class CarrinhoController extends Controller
 
         if ($numeroItensIguais != 0) {
 
-            return redirect()->route('carrinho')->with('error', 'Intem já adicionados ao carrinho');
+            return redirect()->route('carrinho')->with('error', 'Intem já adicionado ao carrinho');
         }
 
         $data = $request->all();
