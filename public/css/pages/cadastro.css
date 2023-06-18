@@ -7,9 +7,6 @@
     justify-content: center;
 }
 
-.hide {
-    display: none !important
-}
 
 #mainCadastro{
     padding-bottom: 8%;
@@ -21,7 +18,7 @@
     background-size: cover;
 }
 
-#cadastro{
+#containerGeral{
     background-color: rgb(255, 255, 255);
     width: 925px;
     padding: 10px;
@@ -31,9 +28,11 @@
     margin-top: 20px;
     border: 2px solid rgba(0, 0, 0, 0.26);
     font-style: italic;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.171)
+}
+#cadastro{
     font-family: 'Times New Roman', Times, serif;
     color: rgba(0, 0, 0, 0.712);
-    box-shadow: 20px 20px rgba(0, 0, 0, 0.171);
     display: flex;
     justify-content: space-between;
  }
@@ -139,7 +138,7 @@ background-color: #16702f6b!important;
 }
 
 @media (max-width:1109px) {
-  #cadastro{
+  #containerGeral{
     width: 90vw;
   }
 }
@@ -150,8 +149,7 @@ background-color: #16702f6b!important;
     padding-top: 0%;
 }
 
-  #cadastro{
-    font-size: small;
+  #containerGeral{
     background-color: rgba(255, 255, 255, 0.897);
     box-shadow: none;
     width: 100%;
@@ -161,6 +159,10 @@ background-color: #16702f6b!important;
     margin-top: 0px;
     border: 0px ;
     box-shadow: none;
+  }
+
+  #cadastro{
+    font-size: small;
     display: block;
  }
 

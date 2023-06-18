@@ -156,6 +156,7 @@ return [
     */
 
     'providers' => ServiceProvider::defaultProviders()->merge([
+        Brian2694\Toastr\ToastrServiceProvider::class,
         /*
          * Package Service Providers...
          */

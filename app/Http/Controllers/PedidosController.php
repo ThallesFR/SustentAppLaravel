@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Carrinho;
 use App\Models\Pedidos;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
 class PedidosController extends Controller
@@ -22,6 +23,7 @@ class PedidosController extends Controller
 
         Carrinho::where('user_id', $user_id)->delete();///--- limpa
 
+        Toastr::success('Pedido realizado com sucesso');
         return redirect()->route('perfil');
     }
 

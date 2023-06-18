@@ -8,6 +8,9 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!--Toastr-->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+
     <!-- css -->
     <link id="css" rel="stylesheet" href="/css/pages/css.css">
     <link id="css" rel="stylesheet" href="/css/pages/perfil.css">
@@ -127,5 +130,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
     <script src="/js/script_navbar.js"> </script>
     <script src="/js/funcoes.js"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    {!! Toastr::message() !!}
+
 </body>
 </html>

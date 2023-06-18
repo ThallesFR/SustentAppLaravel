@@ -92,7 +92,7 @@
                             @csrf
                                  <input name="valor" value="{{($numeroItens *$itens->produto->valor * $itens->quantidade)}}" type="hidden">
                                  <input name="user_id" value="{{ auth()->user()->id }}" type="hidden">
-                            <button type="submit" class="btn btn-success">Pagar</button>
+                            <button id="pagar" type="submit" class="btn btn-success">Pagar</button>
                         </form>
 
                 </div>
